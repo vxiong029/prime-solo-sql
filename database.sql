@@ -34,4 +34,6 @@
     VALUES ('newUsername', 'newCity', null, null, null);
     
     The bank is losing money in Miami and Phoenix and needs to unload low transaction customers: How do you delete users that reside in miami OR phoenix and have completed fewer than 5 transactions.
-
+    SELECT * FROM "accounts"
+    WHERE ("city" = 'phoenix' OR "city" = 'miami') AND
+    "transactions_completed" < 5;
